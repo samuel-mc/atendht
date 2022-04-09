@@ -1,0 +1,60 @@
+/* *****************************************
+*************** HEADER *********************
+******************************************* */
+
+.header {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.header__tittle {
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-right: 80px;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+}
+
+.header__search-bar {
+    align-items: center;
+    background-color: var(--primary-white);
+    border-radius: 24px;
+    display: flex;
+    height: 44px;
+    padding: 8px 12px;
+    width: 280px;
+}
+
+.header__search-bar svg {
+    height: var(--md);
+}
+
+.header__search-bar input {
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.header .button--circle {
+    margin: 0 20px;
+    height: 36px;
+    width: 36px;
+}
+
+.header__side--right button {
+    height: var(--lg);
+    width: var(--lg);
+}
+
+.header__photo {
+    border-radius: 50%;
+    height: 80px;
+    margin: 0 32px;
+    object-fit: cover;
+    width: 80px;
+}
