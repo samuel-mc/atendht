@@ -20,7 +20,27 @@ if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
 
 Flight::route('/', function () {
     Flight::set('flight.views.path', 'intranet');
-    Flight::render('dashboard/index', ['title' => 'Dashboard']);
+    Flight::render('dashboard/index', ['title' => 'Dashboard', 'header' => 'headerIndex']);
+});
+
+Flight::route('/cliente', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/cliente', ['title' => 'Cliente', 'header' => 'headerCliente']);
+});
+
+Flight::route('/pagos', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/pagos', ['title' => 'Historial De Pagos', 'header' => 'headerPagos']);
+});
+
+Flight::route('/servicios', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/servicios', ['title' => 'Servicios', 'header' => 'headerServicios']);
+});
+
+Flight::route('/bitacora', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora', ['title' => 'Bitacora', 'header' => 'headerBitacora']);
 });
 
 /*Flight::route('/dashboard/recept-vials/@id',function($id){

@@ -4,8 +4,16 @@
 
 .header {
     display: flex;
-    padding: 40px;
     justify-content: space-between;
+    position: relative;
+}
+
+header.header {
+    padding: 40px 40px 20px 40px;
+}
+
+div.header {
+    padding: 20px 40px 20px 40px;
 }
 
 .header__tittle {
@@ -29,10 +37,6 @@
     width: 280px;
 }
 
-.header__search-bar svg {
-    height: var(--md);
-}
-
 .header__search-bar input {
     border: none;
     outline: none;
@@ -41,14 +45,39 @@
 }
 
 .header .button--circle {
-    margin: 0 20px;
+    display: flex;
+    font-size: var(--md);
     height: 36px;
+    justify-content: center;
+    margin: 0 20px;
     width: 36px;
 }
 
 .header__side--right button {
     height: var(--lg);
     width: var(--lg);
+}
+
+.header__side--right ul {
+    align-items: center;
+    display: flex;
+    background-color: var(--primary-white);
+    font-size: var(--md);
+    padding: 12px 24px;
+    list-style: none;
+    border-radius: 20px;
+}
+
+.header__side--right a {
+    color: var(--primary-black);
+    margin-right: 12px;
+    text-decoration: none;  
+}
+
+.header__side--left > div > div {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
 }
 
 .header__photo {

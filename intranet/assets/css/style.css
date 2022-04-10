@@ -35,6 +35,7 @@ body {
     background-color: var(--primary-blue);
 }
 
+
 /* *****************************************
 ***************** ASIDE ********************
 ******************************************* */
@@ -53,6 +54,7 @@ body {
     border-radius: 24px;
     margin: 0 32px;
     padding: 20px 40px;
+    position: relative;
 }
 
 .main__header--servicios {
@@ -67,133 +69,7 @@ body {
     align-items: center;
 }
 
-.main__header--servicios section > * {
+.main__header--servicios section > *,
+.main__header--servicios #buttonFiltrar  i {
     margin: 0 12px;
 }
-
-/* *****************************************
-***************** TABLA ********************
-******************************************* */
-
-.main__table {
-    border-collapse: collapse;
-    margin-top: 40px;
-    margin-bottom: 24px;
-    width: 100%;
-}
-
-.main__table th {
-    font-size: var(--md);
-    padding: 12px 0;
-}
-
-.table__row--disable {
-    color: var(--light-gray);
-}
-
-.table__row--disable svg{
-    fill: var(--light-gray);
-}
-
-.main__table td {
-    border-bottom: 1px solid var(--light-gray);
-    padding: 12px 0;
-    text-align: center;
-    font-size: var(--sm);
-}
-
-.main__table td > svg {
-    height: var(--md);
-    margin: 0 4px;
-}
-
-/* *****************************************
-************* MODAL FILTRAR ****************
-******************************************* */
-
-.main__modal--filtrar {
-    background-color: var(--primary-black);
-    color: var(--primary-white);
-}
-
-
-/* *****************************************
-************* FOOTER - MAIN ****************
-******************************************* */
-.main__footer {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    margin: 24px 0;
-    font-size: var(--sm);
-}
-
-.footer__progress--bar {
-    background-color: var(--light-gray);
-    border-radius: 24px;
-    height: 8px;
-    position: relative;
-    width: 240px;
-}
-
-.footer__progress--bar span {
-    background-color: var(--primary-black);
-    border-radius: 24px;
-    height: 8px;
-    left: 20%;
-    position: absolute;
-    width: 64px;
-}
-
-.footer__progress--number {
-    margin: 0 32px;
-}
-
-.footer__progress--buttons .button--transparent {
-    height: var(--sm);
-    width: var(--sm);
-    margin: 0 8px;
-}
-
-/* *****************************************
-************* Modal FILTRAR ****************
-******************************************* */
-
-.main__modal--filtrar {
-    border-radius: 16px;
-    left: 700px;
-    padding: 32px;
-    position: absolute;
-    top: 224px;
-    width: 280px;
-    z-index: 1;
-}
-
-.main__modal--filtrar > form > * {
-    display: flex;
-    flex-direction: column;
-    font-size: var(--md);
-    font-weight: bold;
-    margin: 16px 0;
-    width: 100%;
-}
-
-.main__modal--filtrar select,
-.main__modal--filtrar input {
-    border: none;
-    border-bottom: 1px solid var(--primary-white);
-    background-color: var(--primary-black);
-    color: var(--primary-white);
-    font-size: var(--md);
-    padding: 8px 0;
-}
-
-::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-
-.main__modal--filtrar button {
-    width: 100px;
-    text-align: center;
-}
-

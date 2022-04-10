@@ -1,3 +1,4 @@
+
 /* *****************************************
 *************** BOTONES ********************
 ******************************************* */
@@ -81,4 +82,15 @@
 .button--filter svg {
     height: var(--md);
     margin: 0 12px;
+}
+
+.buttonEditar {
+    background-color: var(--primary-white);
+    border: none;
+    cursor: pointer;
+}
+
+.buttonEditar i {
+    margin: 0;
+    height: var(--md);
 }

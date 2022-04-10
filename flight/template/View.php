@@ -125,6 +125,7 @@ class View {
         include $this->path."/partials/header.php";
         include $this->template;
         include $this->path."/partials/footer.php";
+        include $this->path."/scripts/services.php";
     }
 
 
