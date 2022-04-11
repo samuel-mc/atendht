@@ -8,6 +8,7 @@
     margin-bottom: 24px;
     width: 100%;
     overflow: scroll;
+    min-width: 900px;
 }
 
 .main__table th {

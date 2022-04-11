@@ -112,10 +112,11 @@
                         </a>
                     </td>
                     <td>
-                        Ver Bitácora
+                        N/A
                     </td>
                 </tr>
                 
+                <?php for ($i = 0; $i < 10; $i++) { ?>
                 <tr>
                     <td>21.03.2021</td>
                     <td>000 – 00</td>
@@ -145,50 +146,18 @@
                         </a>
                     </td>
                     <td>
-                        Ver Bitácora
+                        <a href="./bitacora">
+                            Ver Bitácora
+                        </a>
                     </td>
                 </tr>
-                
-                <tr>
-                    <td>21.03.2021</td>
-                    <td>000 – 00</td>
-                    <td>Enf Gral –12hrs </td>
-                    <td>
-                        Jane Doe
-                        <a>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                    </td>
-                    <td>
-                        $1,500
-                        <a>    
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                    </td>
-                    <td>
-                        $ 500
-                        <a>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                    </td>
-                    <td>
-                        $ 120
-                        <a>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                    </td>
-                    <td>
-                        Ver Bitácora
-                    </td>
-                </tr>
+                <?php } ?>
+
 
             </tbody>
         </table>
 
         <footer class="main__footer">
-            <div class="footer__progress--bar">
-                <span></span>
-            </div>
             <div class="footer__progress--number">
                 1 de 16
             </div>

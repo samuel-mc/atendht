@@ -39,8 +39,57 @@ Flight::route('/servicios', function () {
 });
 
 Flight::route('/bitacora', function () {
+    Flight::redirect('/bitacora/ingresosYEgresos');
+});
+
+Flight::route('/bitacora/ingresosYEgresos', function () {
     Flight::set('flight.views.path', 'intranet');
-    Flight::render('dashboard/bitacora', ['title' => 'Bitacora', 'header' => 'headerBitacora']);
+    Flight::render('dashboard/bitacora/ingresos', ['title' => 'Bitacora - Ingresos Y Egresos', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/signosVitales', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/signos', ['title' => 'Bitacora - Signos Vitales', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/movilizaciones', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/movilizaciones', ['title' => 'Bitacora - Movilizaciones', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/apoyoRespiratorio', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/apoyo', ['title' => 'Bitacora - Apoyo Respiratorio', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/medicamentos', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/medicamentos', ['title' => 'Bitacora - Medicamentos', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/evaluacion', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/evaluacion', ['title' => 'Bitacora - Evaluación y reevaluación del dolor', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/pupilar', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/pupilar', ['title' => 'Bitacora - Pupilar', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/glasgow', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/glasgow', ['title' => 'Bitacora - Glasgow', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/perimetros', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/perimetros', ['title' => 'Bitacora - Perímetros', 'header' => 'headerBitacora']);
+});
+
+Flight::route('/bitacora/norton', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/bitacora/norton', ['title' => 'Bitacora - Norton', 'header' => 'headerBitacora']);
 });
 
 /*Flight::route('/dashboard/recept-vials/@id',function($id){

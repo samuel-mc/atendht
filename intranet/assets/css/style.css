@@ -57,6 +57,12 @@ body {
     position: relative;
 }
 
+.main__content > h1 {
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 .main__header--servicios {
     display: flex;
     justify-content: space-between;
@@ -72,4 +78,42 @@ body {
 .main__header--servicios section > *,
 .main__header--servicios #buttonFiltrar  i {
     margin: 0 12px;
+}
+
+/* *****************************************
+************ Sección Bitácora **************
+******************************************* */
+.bitacora__navbar > ul {
+    align-items: center;
+    display: flex;
+    font-size: var(--sm);
+    justify-content: space-between;
+    margin: 12px;
+    position: relative;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.bitacora__navbar a {
+    color: var(--primary-black);
+    text-decoration: none;
+}
+
+ul.bitacora__navbar--escalas {
+    list-style: none;
+}
+
+.bitacora__navbar--escalas {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.escalas i {
+    margin-left: 12px;
+}
+
+.escalas:hover > .bitacora__navbar--escalas  {
+    display: block;
+    z-index: 1;
 }
