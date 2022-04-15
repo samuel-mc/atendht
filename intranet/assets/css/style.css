@@ -4,10 +4,11 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    animation: fadeIn 0.3s ease-in-out;
     box-sizing: border-box;
     font-family: 'Avenir';
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -151,7 +152,18 @@ ul.bitacora__navbar--escalas {
     padding: 8px;
 }
 
-.form__--checkbox {
+.form__field.form__field--doble {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form__field.form__field--doble div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form--checkbox {
     width: 100%;
     margin: 12px 0;
     border-bottom: 1px solid var(--light-gray);
@@ -160,7 +172,7 @@ ul.bitacora__navbar--escalas {
     align-items: center;
 }
 
-.form__--checkbox input[type="checkbox"] {
+.form--checkbox input[type="checkbox"] {
     margin: 12px 0;
 }
 
@@ -182,4 +194,58 @@ ul.bitacora__navbar--escalas {
 .main__add--cotainer {
     margin-top: 32px;
     margin-bottom: 32px;
+}
+
+.main__content form.form__info-paciente {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.field__checkbox {
+    margin: 12px 0;
+}
+
+.main__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px;
+}
+
+.main__buttons div {
+    display: flex;
+    align-items: center;
+}
+
+.main__buttons button {
+    margin-right: 12px;
+}
+
+.info-servicios__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.info-servicios__header h1 {
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.info-servicios__body.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

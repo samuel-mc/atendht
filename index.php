@@ -104,6 +104,11 @@ Flight::route('/add/servicio', function () {
     Flight::render('dashboard/add/servicio', ['title' => 'Agregar - Servicio', 'header' => 'headerBitacora']);
 });
 
+Flight::route('/add/paciente', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/add/paciente', ['title' => 'Agregar - Paciente', 'header' => 'headerBitacora']);
+});
+
 /*Flight::route('/dashboard/recept-vials/@id',function($id){
     $id = str_replace(".", "", $id);
     Flight::redirect('/recept-vials/'.$id);

@@ -1,5 +1,4 @@
 <script type="text/javascript">
-
     // Modal Filtrar
 	let showingModal = false;
     const buttonFiltrar = document.getElementById('buttonFiltrar');
@@ -62,7 +61,10 @@
 
     const main = document.getElementById('header');
 
-    buttonFiltrar.addEventListener('click', showModalFiltrar);
+    if (buttonFiltrar) {
+        buttonFiltrar.addEventListener('click', showModalFiltrar);
+    }
+
 
     function showModalFiltrar() {
         if (!showingModal) {
@@ -226,7 +228,9 @@
             <button type="button" class="button button--primary">Confirmar</button>
         </form>`
 
-    buttonNuevaFactura.addEventListener('click', showModalNuevaFactura);
+    if (buttonNuevaFactura) {
+        buttonNuevaFactura.addEventListener('click', showModalNuevaFactura);    
+    }
 
     function showModalNuevaFactura() {
         const main = document.getElementById('sectionHeader');
@@ -238,6 +242,23 @@
             showingModal = false;
         }
     }
+
+    // Lógica al clickear el botton handleDisplayServicio
+    const buttonDisplayServicio = document.getElementById('buttonDisplayServicio');
+    let infoServicio = document.getElementById('infoServicio');
+    let isHidden = true;
+    const handleDisplayServicio = (e) => {
+        console.log(isHidden);
+        if (isHidden) {
+            infoServicio.classList.remove('hidden');
+            isHidden = false;
+        } else {
+            infoServicio.classList.add('hidden');
+            isHidden = true;
+        }
+    }
+    buttonDisplayServicio.addEventListener('click', handleDisplayServicio);
+
 
 
 

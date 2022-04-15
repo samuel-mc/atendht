@@ -38,7 +38,7 @@
     width: 0;
 }
 
-.main__modal > form > * {
+.main__modal > form > div {
     display: flex;
     flex-direction: column;
     font-size: var(--md);
@@ -64,6 +64,14 @@
 .main__modal .button--submit {
     width: 100px;
     text-align: center;
+}
+
+.main__modal > form > button {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* *****************************************
