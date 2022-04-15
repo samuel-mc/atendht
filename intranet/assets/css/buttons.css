@@ -97,3 +97,10 @@
     margin: 0;
     height: var(--md);
 }
+
+.buttonEditarFecha {
+    background-color: var(--primary-white);
+    border: none;
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+}

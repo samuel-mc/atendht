@@ -69,6 +69,12 @@ body {
     align-items: center;
 }
 
+header.main__header--servicios h1 {
+    font-size: var(--lg);
+    margin: 16px 0;
+    font-weight: bold;
+}
+
 .main__header--servicios section {
     display: flex;
     justify-content: space-between;
@@ -76,7 +82,8 @@ body {
 }
 
 .main__header--servicios section > *,
-.main__header--servicios #buttonFiltrar  i {
+.main__header--servicios #buttonFiltrar  i,
+#buttonNuevaFactura  i {
     margin: 0 12px;
 }
 
@@ -116,4 +123,63 @@ ul.bitacora__navbar--escalas {
 .escalas:hover > .bitacora__navbar--escalas  {
     display: block;
     z-index: 1;
+}
+
+.main__form--top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.main__content form {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--md);
+}
+
+.form__field {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field label:first-child {
+    font-weight: bold;
+}
+.form__field input {
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 8px;
+}
+
+.form__--checkbox {
+    width: 100%;
+    margin: 12px 0;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__--checkbox input[type="checkbox"] {
+    margin: 12px 0;
+}
+
+.form__field select {
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 8px;
+}
+
+.form__info-cliente.form__doble-column  {
+    flex-direction: row;
+}
+
+.form__info-cliente.form__doble-column > div {
+    width: 50%;
+    margin: 0 12px;
+}
+
+.main__add--cotainer {
+    margin-top: 32px;
+    margin-bottom: 32px;
 }

@@ -119,7 +119,6 @@
                 <button type="button" class="button button--primary button--submit">Agregar</button>
             </form>`
 
-        
     const showModalEditar = (e) => {
         const father = e.target.parentNode.parentNode;
         if (!showingModalEditar) {
@@ -135,5 +134,112 @@
     botonesEditar.forEach(boton => {
         boton.addEventListener('click', showModalEditar);
     });
+
+    // Modal Editar Fecha
+    let showingModalEditarFecha = false;
+    let botonesEditarFecha = document.getElementsByClassName('buttonEditarFecha');
+    botonesEditarFecha = Array.from(botonesEditarFecha);
+    const modalEditarFecha = document.createElement("div");
+    modalEditarFecha.classList.add('main__modal', 'modal--fecha');
+    modalEditarFecha.setAttribute('id', 'modalEditFecha');
+    modalEditarFecha.innerHTML =
+        `   <div>
+                <button class="button button--primary button--circle" onclick="closeModalEditarFecha()">
+                    X
+                </button>
+            </div>
+            <form action="">
+                <div>
+                    <label for="aplica">En camino</label>
+                    <input type="date" value="2020-05-01">
+                    <input type="time" value="00:00:00">
+                </div>
+                
+                <div>
+                    <label for="aplica">Check-In</label>
+                    <input type="date" value="2020-05-01">
+                    <input type="time" value="00:00:00">
+                </div>
+                
+                <div>
+                    <label for="aplica">Check-Out</label>
+                    <input type="date" value="2020-05-01">
+                    <input type="time" value="00:00:00">
+                </div>
+
+                <div>
+                    <label for="aplica">Horas Trabajadas</label>
+                    <input type="time" value="00:00:00">
+                </div>
+
+                <button type="button" class="button button--primary button--submit">Guardar</button>
+            </form>`
+
+    const showModalEditarFecha = (e) => {
+        const father = e.target.parentNode;
+        if (!showingModalEditarFecha) {
+            father.appendChild(modalEditarFecha);
+            showingModalEditarFecha = true;
+        }
+    }
+    const closeModalEditarFecha = () => {
+        modalEditarFecha.remove();
+        showingModalEditarFecha = false;
+    }
+    botonesEditarFecha.forEach(boton => {
+        boton.addEventListener('click', showModalEditarFecha);
+    });
+
+    // Modal "Nueva factura"
+    let showingModalNuevaFactura = false;
+    const buttonNuevaFactura = document.getElementById('buttonNuevaFactura');
+    const modalNuevaFactura = document.createElement("div");
+    modalNuevaFactura.classList.add('main__modal', 'main__modal--nuevaFactura');
+    modalNuevaFactura.setAttribute('id', 'modalNuevaFactura');
+    modalNuevaFactura.innerHTML =
+        `<form>
+            <div>
+                <label for="fecha">Periodo</label>
+                <input type="date">
+            </div>
+            
+            <div>
+                <label for="emisor">Emisor</label>
+                <input type="text" value="Ingresa el emisor">
+            </div>
+            
+            <div>
+                <label for="emisor">Monto</label>
+                <input type="text" value="Ingresa el monto">
+            </div>
+
+            <div>
+                <label for="emisor">PDF</label>
+                <input type="file" value="Ingresa el monto">
+            </div>
+
+            <div>
+                <label for="emisor">XML</label>
+                <input type="file" value="Ingresa el monto">
+            </div>
+
+            <button type="button" class="button button--primary">Confirmar</button>
+        </form>`
+
+    buttonNuevaFactura.addEventListener('click', showModalNuevaFactura);
+
+    function showModalNuevaFactura() {
+        const main = document.getElementById('sectionHeader');
+        if (!showingModal) {
+            main.appendChild(modalNuevaFactura);
+            showingModal = true;
+        } else {
+            main.removeChild(modalNuevaFactura);
+            showingModal = false;
+        }
+    }
+
+
+
 
 </script>

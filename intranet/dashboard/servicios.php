@@ -49,7 +49,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>21.03.2021</td>
+                    <td>
+                        <button class="buttonEditarFecha">
+                            21.03.2021
+                        </button>
+                    </td>
                     <td>000 – 00</td>
                     <td>Enf Gral –12hrs </td>
                     <td>
@@ -84,7 +88,11 @@
                 </tr>
                 
                 <tr>
-                    <td>21.03.2021</td>
+                    <td>
+                        <button class="buttonEditarFecha">
+                            21.03.2021
+                        </button>
+                    </td>
                     <td>000 – 00</td>
                     <td>Enf Gral –12hrs </td>
                     <td>
@@ -118,7 +126,11 @@
                 
                 <?php for ($i = 0; $i < 10; $i++) { ?>
                 <tr>
-                    <td>21.03.2021</td>
+                    <td>
+                        <button class="buttonEditarFecha">
+                            21.03.2021
+                        </button>
+                    </td>
                     <td>000 – 00</td>
                     <td>Enf Gral –12hrs </td>
                     <td>

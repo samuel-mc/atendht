@@ -33,11 +33,17 @@ Flight::route('/pagos', function () {
     Flight::render('dashboard/pagos', ['title' => 'Historial De Pagos', 'header' => 'headerPagos']);
 });
 
+Flight::route('/pagosPaciente', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/pagosPaciente', ['title' => 'Historial De Pagos - Paciente', 'header' => 'headerPagosPaciente']);
+});
+
 Flight::route('/servicios', function () {
     Flight::set('flight.views.path', 'intranet');
     Flight::render('dashboard/servicios', ['title' => 'Servicios', 'header' => 'headerServicios']);
 });
 
+// Rutas relacionadas a las bitacoras
 Flight::route('/bitacora', function () {
     Flight::redirect('/bitacora/ingresosYEgresos');
 });
@@ -90,6 +96,12 @@ Flight::route('/bitacora/perimetros', function () {
 Flight::route('/bitacora/norton', function () {
     Flight::set('flight.views.path', 'intranet');
     Flight::render('dashboard/bitacora/norton', ['title' => 'Bitacora - Norton', 'header' => 'headerBitacora']);
+});
+
+// Rutas relacionadas a las funcionalidades de agregar
+Flight::route('/add/servicio', function () {
+    Flight::set('flight.views.path', 'intranet');
+    Flight::render('dashboard/add/servicio', ['title' => 'Agregar - Servicio', 'header' => 'headerBitacora']);
 });
 
 /*Flight::route('/dashboard/recept-vials/@id',function($id){

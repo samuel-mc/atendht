@@ -8,7 +8,7 @@
         <section class="main__content" id="main">
             <header class="main__header--servicios">
                 <section>
-                    <h2>Historial de pagos</h2>
+                    <h2>Historial de pagos paciente</h2>
                 </section>
 
                 <section>
@@ -27,7 +27,6 @@
                 <thead>
                     <tr>
                         <th>Fecha</th>
-                        <th>Paciente</th>
                         <th>Banco</th>
                         <th>Método</th>
                         <th>Monto</th>
@@ -40,7 +39,6 @@
                 <?php for($i = 0; $i<10; $i++){ ?>
                     <tr>
                         <td>21.03.2021</td>
-                        <td>María Pérez P.</td>
                         <td>BBVA</td>
                         <td>Tranferencia</td>
                         <td>$1,500.00</td>
@@ -55,7 +53,6 @@
                 <?php } ?>
                     <tr>
                         <td>21.03.2021</td>
-                        <td>María Pérez P.</td>
                         <td>BBVA</td>
                         <td>Tranferencia</td>
                         <td>$1,500.00</td>
